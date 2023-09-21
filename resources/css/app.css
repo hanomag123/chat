@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.message-block {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+  margin-top: 3rem;
+  padding: 4rem;
+  height: 35rem;
+  overflow: auto;
+  
+}
+
+.message-block li.user {
+  margin-left: auto;
+  filter: brightness(1.5);
+}
+.message-block li.not-user {
+  margin-right: auto;
+  min-width: 15rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.message-block li.not-user .message-date {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.message-block li.not-user .message-message {
+  margin-bottom: 0.5rem;
+  font-size: larger;
+  text-align: end;
+
+}
+
+.message-name {
+  font-size: smaller;
+  margin-bottom: 0.5rem;
+}
+
+.message-date {
+  margin-left: auto;
+  max-width: 4rem;
+  font-size: smaller;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.active-nav {
+  filter: brightness(2);
+}
+
+
+.message-block li {
+  @apply block font-medium text-sm text-gray-700 dark:text-gray-300 p-4 bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg max-w-[50%];
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 10rem;
+}
+
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 15rem;
+  gap: 1rem;
+}
